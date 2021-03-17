@@ -20,7 +20,8 @@ mouseactions
     # scroll page
     execute javascript  window.scrollTo(0,600)
     sleep   3s
-    #scroll element into view    xpath://button[contains(text(),'Copy Text')]
+    #execute javascript  window.scrollTo(0,document.body.scrollHeight)
+
 
 # drag and drop
     go to   http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html

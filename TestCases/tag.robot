@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${browser}  chrome
-${url}  https://www.amazon.in/
+${url}  http://demowebshop.tricentis.com/
 
 *** Keywords ***
 Browser operation
@@ -11,19 +11,19 @@ Browser operation
     maximize browser window
 
 select Option
-    click link  xpath://*[@id="nav-link-accountList"]
+    click link  xpath:/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a
 
 Input Uname
     [Arguments]  ${username}
-    input text  id:ap_email    ${username}
+    input text  id:Email    ${username}
 
-    click element  id:continue
+
 Input Pword
     [Arguments]  ${password}
-    input password  id:ap_password      ${password}
+    input password      id:Password      ${password}
 Click log In btn
-    select checkbox  rememberMe
-    click element  id:signInSubmit
+    select checkbox  RememberMe
+    click link  xpath:/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[5]/input
     sleep  3s
 
 

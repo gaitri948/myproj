@@ -19,11 +19,6 @@ valid Logins
     Click Login Button
     capture page screenshot
     sleep   2s
-Forloop
-    @{items}    create list  pyrobot.xlsx
-    : FOR ${tc}     IN      @{items}
-    \   log to console  ${tc}
-    \   exit for loop if  ${tc}==3
 
     close browser
 
